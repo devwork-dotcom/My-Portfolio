@@ -13,7 +13,11 @@ document.querySelectorAll(".nav-btn").forEach(btn => {
 const themeToggle = document.getElementById("theme-toggle");
 const html = document.documentElement;
 
-// Load saved theme
+// ✅ Default dark mode
+if (!localStorage.getItem("theme")) {
+  localStorage.setItem("theme", "dark");
+}
+
 if (localStorage.getItem("theme") === "dark") {
   html.classList.add("dark");
   themeToggle.textContent = "☀️";
@@ -35,11 +39,13 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+// Mobile menu toggle
 document.getElementById('menu-toggle').addEventListener('click', function() {
   const mobileNav = document.getElementById('mobile-nav');
   mobileNav.classList.toggle('hidden');
 });
 
+// Project view toggle
 document.querySelectorAll('.view-project-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     const id = 'project-' + btn.dataset.project;
@@ -47,20 +53,17 @@ document.querySelectorAll('.view-project-btn').forEach(btn => {
     if (details) {
       details.classList.toggle('hidden');
       if (!details.classList.contains('hidden')) {
-        // Scroll to the button, not the top of the details
         btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
   });
 });
 
-
 // ---------- Typewriter Animation ----------
 const textEl = document.getElementById("animated-text");
-
 const animatedText = "Passionate developer creating production-ready Android & iOS apps, building modern, efficient, and beautiful mobile experiences.";
-const typingSpeed = 80; // milliseconds per character
-const pauseDelay = 1500; // pause before restarting
+const typingSpeed = 80; 
+const pauseDelay = 1500; 
 
 let charIndex = 0;
 
@@ -70,7 +73,6 @@ function typeWriter() {
     charIndex++;
     setTimeout(typeWriter, typingSpeed);
   } else {
-    // pause and restart
     setTimeout(() => {
       textEl.innerHTML = "";
       charIndex = 0;
