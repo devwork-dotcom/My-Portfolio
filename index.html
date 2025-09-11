@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Shamim Hosen | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <!-- Font Awesome Free 6.4 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 left-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-colors duration-300">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo/Name -->
+      <div class="text-xl font-bold text-gray-800 dark:text-white">Md. Shamim Hosen</div>
+
+      <!-- Navigation (left side, desktop only) -->
+      <nav id="nav-menu" class="hidden md:flex flex-wrap items-center gap-2 md:gap-4 ml-6">
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="about">About</button>
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="experience">Experience</button>
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="projects">Projects</button>
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="education">Education</button>
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="skills">Skills</button>
+        <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300" data-target="contact">Contact</button>
+      </nav>
+
+      <!-- Right Side Controls -->
+      <div class="flex items-center gap-2 md:gap-4">
+        <!-- Resume Button -->
+        <a href="assets/resu.pdf" download class="text-sky-600 font-semibold hover:text-sky-400 dark:hover:text-sky-300 transition-colors duration-300 px-2 py-1 rounded">Resume</a>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded">🌙</button>
+        <!-- Hamburger Icon (mobile only, far right) -->
+        <button id="menu-toggle" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none ml-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation (dropdown, left side) -->
+    <nav id="mobile-nav" class="md:hidden hidden flex-col bg-white dark:bg-gray-800 shadow-md absolute w-full left-0 top-full z-40">
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="about">About</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="experience">Experience</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="projects">Projects</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="skills">Skills</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="awards">Awards</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="leadership">Leadership</button>
+      <button class="nav-btn text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 w-full text-left px-4 py-2" data-target="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main class="pt-24 max-w-6xl mx-auto p-6 space-y-24">
+
+    <!-- About Section -->
+    <section id="about" class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+      <!-- Left Side: Profile Info & Social Links -->
+      <div class="flex flex-col items-center md:items-start w-full md:w-[35%]">
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-sky-500 shadow-lg">
+          <img src="assets/profile.jpg" alt="Profile" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold mt-4 text-gray-800 dark:text-white text-center md:text-left">Md. Shamim Hosen</h1>
+        <p class="text-md md:text-lg mt-1 text-gray-600 dark:text-gray-300 text-center md:text-left">Software Engineer</p>
+        
+        <!-- Social & Resume Links -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+          <a href="https://github.com/devwork-dotcom" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 hover:bg-sky-100 dark:hover:bg-sky-800 text-gray-700 dark:text-gray-200 transition">
+            <!-- GitHub SVG -->
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.89.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.38 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/md-shamim-hosen-212270373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 hover:bg-sky-100 dark:hover:bg-sky-800 text-gray-700 dark:text-gray-200 transition">
+            <!-- LinkedIn SVG -->
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.32-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.91v5.59h-3v-10h2.88v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.01 0 3.57 1.98 3.57 4.56v5.64z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:shamim.devwork@gmail.com" class="flex items-center gap-2 px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 hover:bg-sky-100 dark:hover:bg-sky-800 text-gray-700 dark:text-gray-200 transition">
+            <!-- Email SVG -->
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.99-7.065v14h23.98v-14zm0-2.13l11.99-7.065h-23.98zm0 0"/></svg>
+            Email
+          </a>
+          <a href="assets/resu.pdf" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white transition font-semibold">
+            <!-- Resume SVG -->
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-7V3.5L18.5 9H13z"/></svg>
+            View Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Side: About Paragraph -->
+       
+
+    <div class="w-full md:w-[60%] text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed text-center md:text-left">
+    <h1 class="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white py-4">
+        Hi, I'm <span class="text-sky-500 dark:text-sky-400">Shamim.</span>
+    </h1>
+    <span id="animated-text"></span><span class="blinking-cursor">|</span>
+    </div>
+
+
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-10 gap-6 items-start">
+        <!-- Title (2 columns) -->
+        <div class="md:col-span-2 flex items-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white text-center md:text-left">Experience</h2>
+        </div>
+        <!-- Cards (8 columns) -->
+        <div class="md:col-span-8 grid grid-cols-1 gap-6">
+          <!-- ...inside Experience Section, add after existing cards... -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] border border-gray-200 dark:border-gray-700 hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-sky-600 dark:text-sky-400">IoT Engineer Intern · Bangladesh Rice Research Institute</h3>
+            <span class="text-sm font-semibold text-gray-500 dark:text-gray-400">3 Mar 2025 – 27 Mar 2025</span>
+        </div>
+        <ul class="list-disc pl-5 space-y-2">
+            <li><span class="font-bold">Implemented LoRaWAN-based IoT system</span> for smart agriculture.</li>
+            <li><span class="font-bold">Integrated sensors, Arduino, and LoRa modules</span> for field deployment.</li>
+            <li><span class="font-bold">Collected real-time environmental data</span> from rice fields and pushed to the cloud platform.</li>
+            <li><span class="font-bold">Performed data analysis</span> on the cloud to enable automated irrigation control.</li>
+        </ul>
+        </div>
+          
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-10 gap-6 items-start">
+        <!-- Title (2 columns) -->
+        <div class="md:col-span-2 flex items-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white text-center md:text-left">Projects</h2>
+        </div>
+        <!-- Cards (8 columns) -->
+        <div class="md:col-span-8 grid grid-cols-1 gap-6">
+          <!-- ...inside Projects Section, replace each card like below... -->
+
+        <!-- Project Card 1 (Delivered) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Mobile App — ABUF (Admin & User)</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Delivered</span>
+        </div>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Full Stack Apps Developer | 2023 - 2024</p>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Built admin and user apps for campaigns, donations, and events with secure role-based access.</p>
+        <div class="flex gap-3 mt-4">
+        <a href="https://github.com/devwork-dotcom/abuf-app" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+        
+        <a href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">
+        <!-- Play Store SVG -->
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3.3 1.8c-.5.3-.8.8-.8 1.3v17.8c0 .5.3 1 .8 1.3.5.3 1 .3 1.5.1l15.2-8.9c.5-.3.8-.8.8-1.3s-.3-1-.8-1.3L4.8 1.8c-.5-.3-1-.3-1.5 0zm1.2 1.2l14.7 8.6-14.7 8.6V3z"/></svg>
+        Play Store
+        </a>
+        <a href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">
+        <!-- App Store SVG -->
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.564 13.063c-.019-2.019 1.654-2.991 1.727-3.037-0.941-1.376-2.406-1.564-2.924-1.587-1.244-.126-2.429.728-3.067.728-.638 0-1.62-.712-2.664-.693-1.372.021-2.642.799-3.349 2.034-1.432 2.482-.366 6.154 1.029 8.167.683.995 1.495 2.113 2.563 2.073 1.034-.042 1.426-.669 2.677-.669 1.251 0 1.601.669 2.677.648 1.108-.021 1.805-1.014 2.484-2.012.786-1.146 1.111-2.259 1.13-2.318-.024-.011-2.169-.834-2.191-3.307zm-2.964-6.019c.563-.683.944-1.634.841-2.584-.813.032-1.792.541-2.373 1.224-.521.604-.978 1.573-.805 2.495.853.066 1.779-.433 2.337-1.135z"/></svg>
+        App Store
+        </a>
+    <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="abuf">View Project</button>
+        </div>
+        
+        <div id="project-abuf" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">ABUF App Details</h4>
+            <p>Full details about the ABUF app project go here. You can add screenshots, features, and more info.</p>
+        </div>
+        </div>
+
+        <!-- Project Card 2 (Delivered) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold mb-2 text-gray-800 dark:text-white">Mobile App — Bangladesh Diesel Plant Ltd.</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Delivered</span>
+        </div>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Full Stack Flutter App Developer | 2025</p>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Industrial-scale app for material and production management with real-time monitoring and secure user roles.</p>
+        <div class="flex gap-3 mt-4">
+            <a href="https://github.com/devwork-dotcom/bdp-app" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">Play Store</a>
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">App Store</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="bdp">View Project</button>
+        </div>
+        <div id="project-bdp" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">Bangladesh Diesel Plant App Details</h4>
+            <p>Full details about the BDP app project go here. You can add screenshots, features, and more info.</p>
+        </div>
+        </div>
+
+        <!-- Project Card 3 (Continue) -->
+
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Mobile App — DUET Swajan (Blood Donation App)</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Delivered</span>
+        </div>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Full Stack Flutter App Developer | 2024 - 2025</p>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            Developed a user-friendly blood donation app for DUET Swajan, connecting donors and recipients across the DUET campus in real-time.
+            The app streamlines emergency requests, donor registration, and event coordination to foster a stronger, lifesaving student community.
+        </p>
+
+
+        <div class="flex gap-3 mt-4">
+            <a href="https://github.com/devwork-dotcom/bdp-app" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">Play Store</a>
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">App Store</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="swajan">View Project</button>
+        </div>
+        <div id="project-swajan" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">DUET Swajan App Details</h4>
+            <p>Full details about the DUET Swajan blood donation app go here. You can add screenshots, features, and more info.</p>
+        </div>
+        
+        
+        </div>
+
+
+
+        <!-- Project Card 4 (Continue) -->
+
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">DUET Hall Dining Management</h3>
+            <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 text-xs font-semibold">Continue</span>
+        </div>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Full Stack Flutter App Developer | 2024 - Present</p>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Designed a meal-management system for dorms with admin and user panels, PDF reports, and automated bazar scheduling.</p>
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="dining">View Project</button>
+        </div>
+        <div id="project-dining" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">DUET Hall Dining Management Details</h4>
+            <p>Full details about the dining management project go here. You can add screenshots, features, and more info.</p>
+        </div>
+        </div>
+
+        <!-- Project Card 5 (Academic) -->
+
+
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Smart Blood Donation & Charity App</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Academic</span>
+        </div>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Academic Project | 2025</p>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            A mobile application built with Java, XML, and Firebase to manage blood requests, donor search, 
+            networking, and communication. The app also supports social features like post creation, 
+            membership certification, and organizes medical campaigns & charity collections.
+        </p>
+
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="smart-blood">View Project</button>
+        </div>
+
+        <div id="project-smart-blood" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">Smart Blood Donation & Charity App — Details</h4>
+            <ul class="text-sm list-disc pl-5 space-y-2">
+            <li><strong>Purpose:</strong> Create a community-driven platform to manage blood donations, emergency requests, 
+            and charity events with real-time Firebase integration.</li>
+            <li><strong>Core features:</strong> Blood request & donor search, membership certificate generation, 
+            networking/communication tools, social post creation (similar to Facebook), medical campaign management, 
+            and charity donation/collection tracking.</li>
+            <li><strong>Tech stack:</strong> Native Android (Java + XML), Firebase Realtime Database & Authentication, 
+            Firebase Storage for images/posts, and cloud functions for backend logic.</li>
+            <li><strong>Benefits:</strong> Real-time donor availability, stronger donor-recipient communication, 
+            integrated social awareness campaigns, and streamlined charity fund management.</li>
+            <li><strong>Future scope:</strong> AI-based donor matching, geolocation tracking for nearby donors, 
+            payment gateway for donations, multilingual support, and advanced analytics dashboards.</li>
+            </ul>
+        </div>
+        </div>
+
+
+        <!-- Project Card 6 (Academic) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Blood Donation Management System</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Academic</span>
+        </div>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Academic Project | 2024</p>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            A web-based platform to register donors, schedule donation sessions, view nationwide donation events,
+            and maintain a centralized donor & blood-stock database. Designed to speed up donor matching and
+            provide quick access during emergencies.
+        </p>
+
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="bdms">View Project</button>
+        </div>
+
+        <div id="project-bdms" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">Blood Donation Management System — Details</h4>
+            <ul class="text-sm list-disc pl-5 space-y-2">
+            <li><strong>Purpose:</strong> Provide an online platform for donor registration, appointment booking, and rapid donor lookup during emergencies.</li>
+            <li><strong>Core features:</strong> Donor registration, session reservation, event listing, admin CRUD (donor/stock), notifications, and reporting/analytics.</li>
+            <li><strong>Tech stack:</strong> Web front-end (HTML/JS), server-side (JSP / Java Servlets or PHP), and MySQL for centralized storage.</li>
+            <li><strong>Benefits:</strong> Faster donor matching, improved stock visibility, reduced manual overhead, and better coordination during crises.</li>
+            <li><strong>Future scope:</strong> Mobile app, EHR integration, multi-language support, enhanced security/audits, and advanced analytics for campaign optimization.</li>
+            </ul>
+        </div>
+        </div>
+
+
+
+        <!-- Project Card 7 (Academic) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">Automatic Pet Feeder</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Academic</span>
+        </div>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Academic Project | 2024</p>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            An IoT-based smart feeder for pets controlled via mobile application. It uses ESP8266, servo motors, and dispensers to serve food automatically at scheduled times and quantities.
+            The system can be extended with CCTV integration to monitor pets in real-time, ensuring proper feeding even when owners are away.
+        </p>
+
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="petfeeder">View Project</button>
+        </div>
+
+        <div id="project-petfeeder" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">Automatic Pet Feeder — Details</h4>
+            <ul class="text-sm list-disc pl-5 space-y-2">
+            <li><strong>Problem solved:</strong> Busy owners often forget or delay feeding their pets, leading to irregular meal routines and poor health.</li>
+            <li><strong>Key components:</strong> ESP8266 Wi-Fi module, servo motor, dispenser, dining bowl, real-time clock, and optional CCTV camera.</li>
+            <li><strong>Features:</strong> Remote control via mobile app, scheduled feeding, adjustable food portions, and internet connectivity for monitoring.</li>
+            <li><strong>Methodology:</strong> IoT-based automation with mobile app integration (Blynk), data analysis, and hardware testing for reliability.</li>
+            <li><strong>Impact:</strong> Provides convenience, ensures pets are well-fed even in the owner's absence, and reduces pet health risks like overeating or malnutrition.</li>
+            <li><strong>Future scope:</strong> Commercialization, energy-efficient redesign, and enhanced monitoring with real-time video feedback.</li>
+            </ul>
+        </div>
+        </div>
+
+        <!-- Project Card 8 (Academic) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">General Store Management System</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Academic</span>
+        </div>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Academic Project | 2024</p>
+
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            A self-contained sales terminal application for retail stores and super shops supporting item checkout (barcode/QR/manual), returns, and receipt generation.
+            Designed to streamline daily store operations, inventory interaction, and sales reporting with scalability for multi-terminal setups.
+        </p>
+
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="gsms">View Project</button>
+        </div>
+
+        <div id="project-gsms" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">General Store Management System — Details</h4>
+            <ul class="text-sm list-disc pl-5 space-y-2">
+            <li><strong>Core features:</strong> Barcode/QR/manual product entry, sales checkout, returns & reimbursement, receipt printing, and sales data collection for reports.</li>
+            <li><strong>Inventory & Scaling:</strong> Integrates inventory control and supports multiple networked terminals with optional vendor ordering.</li>
+            <li><strong>UX & Goals:</strong> Fast, accurate sales processing to reduce cashier workload and provide data-driven decisions for store management.</li>
+            <li><strong>Tech & Deliverables:</strong> Terminal application, reporting modules, admin/manager dashboards and web pages for product/employee/supplier management.</li>
+            <li><strong>Future scope:</strong> Add vendor integrations, analytics dashboard, and cloud sync across branches.</li>
+            </ul>
+        </div>
+        </div>
+
+
+
+        <!-- Project Card 9 (Academic) -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-300 p-6">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">To Do Manager</h3>
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-semibold">Academic</span>
+        </div>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Academic Project | 2025</p>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">
+            A notebook-style application that helps users manage daily activities by adding, updating, searching, and removing tasks. 
+            Focused on proper time management and efficient task tracking with plans to integrate alarm notifications in the future.
+        </p>
+        <div class="flex gap-3 mt-4">
+            <a href="#" target="_blank" class="px-4 py-2 rounded bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-sky-100 dark:hover:bg-sky-800 transition">GitHub</a>
+            <button class="px-4 py-2 rounded bg-sky-600 hover:bg-sky-700 text-white font-semibold transition view-project-btn" data-project="todo">View Project</button>
+        </div>
+        <div id="project-todo" class="hidden mt-4 p-4 rounded-xl bg-sky-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+            <h4 class="font-bold mb-2">To Do Manager Project Details</h4>
+            <p>
+            The To Do Manager allows users to login, create, update, search, and delete daily tasks with proper authorization and logout features. 
+            It ensures efficient time management and organization. The future scope includes adding an alarm/reminder system and improving UI for a more elegant design.
+            </p>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-10 gap-6 items-start">
+        <!-- Title (2 columns) -->
+        <div class="md:col-span-2 flex items-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white text-center md:text-left">Education</h2>
+        </div>
+        <!-- Cards (8 columns) -->
+        <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Education Card 1 -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.3)] transition-all duration-300 p-6">
+            <div class="font-semibold text-sky-600 dark:text-sky-400 mb-2">28 Nov 2021 - Continue</div>
+            <div class="text-lg font-bold text-gray-800 dark:text-white mb-1">B.Sc. in Computer Science and Engineering, DUET, Gazipur</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Bachelor of Science</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">CGPA: 3.40 / 4.0</div>
+        </div>
+        <!-- Education Card 2 -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.3)] transition-all duration-300 p-6">
+            <div class="font-semibold text-yellow-600 dark:text-yellow-400 mb-2">2016 - 2020</div>
+            <div class="text-lg font-bold text-gray-800 dark:text-white mb-1">Bangladesh Institute of Information Technology (BIIT), Bogura</div>
+            <div class="text-gray-700 dark:text-gray-300 mb-1">Diploma in Engineering</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400">GPA: 3.97 / 4.0</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-10 gap-6 items-start">
+        <!-- Title (2 columns) -->
+        <div class="md:col-span-2 flex items-center">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white text-center md:text-left">Skills</h2>
+        </div>
+        <!-- Cards (8 columns) -->
+        <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Mobile App Development Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(56,189,248,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-sky-600 dark:text-sky-400">Mobile App Development :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Flutter (Dart)
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Java, XML
+              </div>
+            </div>
+          </div>
+          <!-- Backend Development Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(34,197,94,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(34,197,94,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-green-600 dark:text-green-400">Backend Development :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(34,197,94,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(34,197,94,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Node.js
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(34,197,94,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(34,197,94,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Express.js
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(16,185,129,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(16,185,129,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                MongoDB
+              </div>
+            </div>
+          </div>
+          <!-- Database Management Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(255,193,7,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(255,193,7,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-yellow-600 dark:text-yellow-400">Database Management :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Firebase
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(16,185,129,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(16,185,129,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                MongoDB
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Shared Preferences
+              </div>
+            </div>
+          </div>
+          <!-- State Management Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(121,28,202,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(121,28,202,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-purple-600 dark:text-purple-400">State Management :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(121,28,202,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(121,28,202,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Getx
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Riverpod
+              </div>
+            </div>
+          </div>
+          <!-- Programming Languages Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(255,87,34,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(255,87,34,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-orange-600 dark:text-orange-400">Programming Languages :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Dart
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(59,130,246,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(59,130,246,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Python
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,193,7,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Java
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(59,130,246,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(59,130,246,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                C++
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,87,34,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,87,34,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                HTML
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(121,28,202,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(121,28,202,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                PHP
+              </div>
+            </div>
+          </div>
+          <!-- Version Control Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(33,33,33,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(33,33,33,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-gray-700 dark:text-gray-200">Version Control :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(33,33,33,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(33,33,33,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Git & GitHub
+              </div>
+            </div>
+          </div>
+          <!-- IoT Development Card -->
+          <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(255,0,128,0.25)] dark:hover:shadow-[0_8px_32px_0_rgba(255,0,128,0.3)] transition-all duration-300 p-6">
+            <h3 class="font-semibold text-lg mb-4 text-pink-600 dark:text-pink-400">IoT Development :</h3>
+            <div class="flex flex-wrap gap-3">
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(255,0,128,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(255,0,128,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Microcontroller
+              </div>
+              <div class="group flex items-center justify-center px-4 py-2 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_2px_12px_0_rgba(58,183,255,0.07)] hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.18)] dark:hover:shadow-[0_4px_24px_0_rgba(58,183,255,0.22)] transition-all duration-300 font-semibold text-gray-700 dark:text-gray-200">
+                Sensor & Cloud Integration
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-1 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-white text-center">
+        Get in Touch
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        
+        <!-- Phone Card -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-[2000ms] p-6 text-center">
+            <h3 class="font-semibold mb-2 text-gray-800 dark:text-white text-lg">Phone</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">+880 1788 435394</p>
+        </div>
+
+        <!-- Email Card -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-[2000ms] p-6 text-center">
+            <h3 class="font-semibold mb-2 text-gray-800 dark:text-white text-lg">Email</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">shamim.devwork@gmail.com</p>
+        </div>
+
+        <!-- Location Card -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-[0_4px_24px_0_rgba(58,183,255,0.05)] hover:shadow-[0_8px_32px_0_rgba(58,183,255,0.3)] transition-all duration-[2000ms] p-6 text-center">
+            <h3 class="font-semibold mb-2 text-gray-800 dark:text-white text-lg">Location</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">DUET, Joydebpur, Gazipur-1707, Bangladesh</p>
+        </div>
+
+        </div>
+
+
+    </div>
+    </section>
+
+
+
+  </main>
+
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-12 pb-2.5">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Left Column: Branding / About -->
+        <div class="text-center md:text-left">
+        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Md. Shamim Hosen</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Passionate Full-Stack Developer & App Enthusiast. Building modern web and mobile solutions.
+        </p>
+        </div>
+
+        <!-- Right Column: Social / Contact -->
+        <div class="text-center md:text-right">
+        <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Connect with me</h4>
+        <div class="flex justify-center md:justify-end gap-4 mb-3">
+            <a href="https://www.linkedin.com/in/md-shamim-hosen-212270373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-500 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition duration-300 text-2xl">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/devwork-dotcom" target="_blank" class="text-gray-500 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition duration-300 text-2xl">
+            <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1BT8Z1iJQx/" target="_blank" class="text-gray-500 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition duration-300 text-2xl">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="mailto:shamimshsh0@gmail.com" class="text-gray-500 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition duration-300 text-2xl">
+            <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Middle Row -->
+    <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">
+        Built with ❤️ • Android & iOS Apps
+        </p>
+        <p class="text-gray-400 text-xs md:text-sm">
+        &copy; 2025 Md. Shamim Hosen. All rights reserved.
+        </p>
+    </div>
+    </footer>
+
+
+
+
+    <!-- FontAwesome CDN for icons -->
+
+  <!-- Link to external JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
