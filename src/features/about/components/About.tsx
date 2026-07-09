@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export const About: React.FC = () => {
   const animatedText = "Passionate developer creating production-ready Android & iOS apps, building modern, efficient, and beautiful mobile experiences.";
+  const profileImage = `${import.meta.env.BASE_URL}assets/profile.png`;
   const [typedText, setTypedText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 
@@ -34,7 +35,7 @@ export const About: React.FC = () => {
       <div className="flex flex-col items-center md:items-start w-full md:w-[35%] z-10">
         <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-sky-500 shadow-xl relative hover:scale-105 transition duration-300">
           <img 
-            src="assets/profile.png" 
+            src={profileImage}
             alt="Md. Shamim Hosen" 
             className="w-full h-full object-cover"
             onError={(e) => {

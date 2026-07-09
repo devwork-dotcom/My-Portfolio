@@ -1,18 +1,15 @@
-import { Header } from './components/Header';
-import { About } from './components/About';
-import { Experience } from './components/Experience';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { About } from './features/about';
+import { Contact } from './features/contact';
+import { Experience } from './features/experience';
+import { Projects } from './features/projects';
+import { Skills } from './features/skills';
+import { Footer, Header } from './shared/layout';
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
-      {/* Dynamic navbar */}
       <Header />
-      
-      {/* Page Content */}
+
       <main className="space-y-16 pb-12">
         <About />
         <Experience />
@@ -21,7 +18,6 @@ function App() {
         <Contact />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

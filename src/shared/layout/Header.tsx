@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export const Header: React.FC = () => {
+  const resumeUrl = `${import.meta.env.BASE_URL}assets/resu.pdf`;
   const [theme, setTheme] = useState<string>(() => {
     return localStorage.getItem('theme') || 'dark';
   });
@@ -55,7 +56,7 @@ export const Header: React.FC = () => {
         {/* Controls */}
         <div className="flex items-center gap-3">
           <a
-            href="/assets/resu.pdf"
+            href={resumeUrl}
             download
             className="text-xs font-bold px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/45 text-sky-600 dark:text-sky-400 border border-sky-100 dark:border-sky-900/40 hover:bg-sky-100 dark:hover:bg-sky-900/60 transition duration-200"
           >

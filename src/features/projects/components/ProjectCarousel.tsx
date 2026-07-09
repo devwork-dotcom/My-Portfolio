@@ -1,94 +1,83 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface ProjectCarouselProps {
   images: string[];
   projectId: string;
 }
 
-export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, projectId }) => {
-  const cardsCount = 5;
-  const cardWidth = 170; // Matches CSS width
-  // Radius calculation: R = width / (2 * tan(pi / n)) => R = 170 / (2 * tan(36deg)) = 117px
+export const ProjectCarousel = ({ images, projectId }: ProjectCarouselProps) => {
+  const cardImages = images.slice(0, 5);
+  const cardsCount = cardImages.length || 1;
+  const cardWidth = 170;
   const radius = Math.round(cardWidth / (2 * Math.tan(Math.PI / cardsCount)));
   const anglePerCard = 360 / cardsCount;
 
   const [currentAngle, setCurrentAngle] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   
   const startX = useRef(0);
   const dragStartAngle = useRef(0);
-  const cylinderRef = useRef<HTMLDivElement>(null);
   const autoRotateTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Sync index based on rotation angle
-  useEffect(() => {
-    let index = Math.round(-currentAngle / anglePerCard) % cardsCount;
-    if (index < 0) index += cardsCount;
-    setCurrentIndex(index);
-  }, [currentAngle]);
+  let currentIndex = Math.round(-currentAngle / anglePerCard) % cardsCount;
+  if (currentIndex < 0) currentIndex += cardsCount;
 
-  // Autoplay loop
-  const startAutoRotate = () => {
-    stopAutoRotate();
-    autoRotateTimer.current = setInterval(() => {
-      setCurrentAngle(prev => prev - anglePerCard);
-    }, 4500);
-  };
-
-  const stopAutoRotate = () => {
+  const stopAutoRotate = useCallback(() => {
     if (autoRotateTimer.current) {
       clearInterval(autoRotateTimer.current);
       autoRotateTimer.current = null;
     }
-  };
+  }, []);
+
+  const startAutoRotate = useCallback(() => {
+    stopAutoRotate();
+    autoRotateTimer.current = setInterval(() => {
+      setCurrentAngle(prev => prev - anglePerCard);
+    }, 4500);
+  }, [anglePerCard, stopAutoRotate]);
 
   useEffect(() => {
     startAutoRotate();
-    return () => stopAutoRotate();
-  }, []);
+    return stopAutoRotate;
+  }, [startAutoRotate, stopAutoRotate]);
 
-  // Controls
-  const rotateNext = () => {
+  const rotateNext = useCallback(() => {
     stopAutoRotate();
     setCurrentAngle(prev => prev - anglePerCard);
     startAutoRotate();
-  };
+  }, [anglePerCard, startAutoRotate, stopAutoRotate]);
 
-  const rotatePrev = () => {
+  const rotatePrev = useCallback(() => {
     stopAutoRotate();
     setCurrentAngle(prev => prev + anglePerCard);
     startAutoRotate();
-  };
+  }, [anglePerCard, startAutoRotate, stopAutoRotate]);
 
-  // Drag handlers
-  const handleDragStart = (clientX: number) => {
+  const handleDragStart = useCallback((clientX: number) => {
     setIsDragging(true);
     startX.current = clientX;
     dragStartAngle.current = currentAngle;
     stopAutoRotate();
-  };
+  }, [currentAngle, stopAutoRotate]);
 
-  const handleDragMove = (clientX: number) => {
+  const handleDragMove = useCallback((clientX: number) => {
     if (!isDragging) return;
     const dx = clientX - startX.current;
     const sensitivity = 0.55;
     setCurrentAngle(dragStartAngle.current + dx * sensitivity);
-  };
+  }, [isDragging]);
 
-  const handleDragEnd = () => {
+  const handleDragEnd = useCallback(() => {
     if (!isDragging) return;
     setIsDragging(false);
-    
-    // Snap to nearest card
+
     setCurrentAngle(prev => {
       const snappedIndex = Math.round(-prev / anglePerCard);
       return -snappedIndex * anglePerCard;
     });
     startAutoRotate();
-  };
+  }, [anglePerCard, isDragging, startAutoRotate]);
 
-  // Listen to window events to ensure smooth dragging releases outside component
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
       if (isDragging) handleDragMove(e.clientX);
@@ -104,7 +93,7 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, projec
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseup', onMouseUp);
     };
-  }, [isDragging, currentAngle]);
+  }, [handleDragEnd, handleDragMove, isDragging]);
 
   return (
     <div className="flex flex-col items-center justify-center relative py-6 bg-slate-100/30 dark:bg-slate-900/30 rounded-3xl border border-slate-200/40 dark:border-slate-800/40 w-full select-none">
@@ -117,14 +106,13 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, projec
         onTouchEnd={handleDragEnd}
       >
         <div 
-          ref={cylinderRef}
           className="carousel-3d-cylinder" 
           style={{ 
             transform: `rotateY(${currentAngle}deg)`,
             transition: isDragging ? 'none' : 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)'
           }}
         >
-          {images.map((imgUrl, i) => {
+          {cardImages.map((imgUrl, i) => {
             const isCurrentActive = i === currentIndex;
             return (
               <div 
@@ -141,7 +129,6 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, projec
                     alt={`Project Screen ${i + 1}`}
                     draggable="false"
                     onError={(e) => {
-                      // Fail-safe if unsplash fails: show visual color grid patterns
                       (e.target as HTMLImageElement).src = `https://picsum.photos/300/450?random=${i + 1}`;
                     }}
                   />
@@ -173,7 +160,7 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, projec
         </button>
       </div>
       <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-2.5 italic">
-        💡 Drag or swipe to spin the cylinder
+        Drag or swipe to spin the cylinder
       </p>
     </div>
   );
